@@ -1,29 +1,51 @@
-# Node Skeleton
+## DECISION MAKER
 
-## Project Setup
+Poll generating web application using the Borda Count algorithm to determine rankings. Built with Node, Express, PostgresSQL, jQuery.
 
-1. Create your own empty repo on GitHub
-2. Clone this repository (do not fork)
-  - Suggestion: When cloning, specify a different folder name that is relevant to your project
-3. Remove the git remote: `git remote rm origin`
-4. Add a remote for your origin: `git remote add origin <your github repo URL>`
-5. Push to the new origin: `git push -u origin master`
-6. Verify that the skeleton code now shows up in your repo on GitHub
+Users can create new polls or vote on existing ones. Poll creators recieve email updates via Mailgun. Results are displayed graphically on the poll's admin page.   
 
-## Getting Started
+### Screenshots
 
-1. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
-2. Update the .env file with your correct local information
-3. Install dependencies: `npm i`
-4. Fix to binaries for sass: `npm rebuild node-sass`
-5. Run migrations: `npm run knex migrate:latest`
-  - Check the migrations folder to see what gets created in the DB
-6. Run the seed: `npm run knex seed:run`
-  - Check the seeds file to see what gets seeded in the DB
-7. Run the server: `npm run local`
-8. Visit `http://localhost:8080/`
+![image](./public/images/screenshots/home.png)
+![image](./public/images/screenshots/login.png)
+![image](./public/images/screenshots/new.png)
+![image](./public/images/screenshots/vote.png)
+![image](./public/images/screenshots/thanks.png)
+![image](./public/images/screenshots/results.png)
 
-## Dependencies
+### Usage
 
-- Node 5.10.x or above
-- NPM 3.8.x or above
+1. ```git clone <new folder>```
+2. ```npm i``` 
+3. Within psql environment: ```create database <db name> owner <user>;```
+4. Create a .env in the root folder and add the following:
+```
+DB_HOST=<host>
+DB_USER=<user>
+DB_PASS=<pass>
+DB_NAME=<db name>
+DB_SSL=true if heroku
+DB_PORT=5432
+API_KEY=<mailgun key>
+DOMAIN=<mailgun domain>
+```
+6. ```knex migrate:latest```
+7. ```npm start```
+8. ```xdg-open http://localhost:8080```
+
+### Dependencies
+
+* body-parser
+* chart.js
+* cookie-session
+* dotenv
+* ejs
+* express
+* knex
+* knex-logger
+* mailgun-js
+* morgan
+* node-sass-middleware
+* pg
+* uuidv4
+
