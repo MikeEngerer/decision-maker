@@ -9,7 +9,7 @@ Users can create new polls or vote on existing ones. Poll creators recieve email
 ![image](./public/images/screenshots/home.png)
 ![image](./public/images/screenshots/login.png)
 ![image](./public/images/screenshots/new.png)
-![image](./public/images/screenshots/vote.png)
+![image](./public/images/screenshots/vote2.png)
 ![image](./public/images/screenshots/thanks.png)
 ![image](./public/images/screenshots/results.png)
 
